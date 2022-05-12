@@ -33,4 +33,8 @@ class App
   def create_a_book(title, author)
     @books.push(Book.new(title, author))
   end
+
+  def create_a_rental(date, book_id, person_id)
+    @rentals.push(Rental.new(date, @books[book_id], @persons[person_id]))
+  end
 end
