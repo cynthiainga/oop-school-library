@@ -29,4 +29,8 @@ class App
   def create_a_student(name, age, parent_permission)
     @persons.push(Student.new(age, nil, name, parent_permission: parent_permission))
   end
+
+  def create_a_book(title, author)
+    @books.push(Book.new(title, author))
+  end
 end
