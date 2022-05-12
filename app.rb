@@ -21,4 +21,8 @@ class App
   def list_all_persons
     @persons
   end
+
+  def create_a_teacher(name, age, specialization)
+    @persons.push(Teacher.new(age, specialization, name, parent_permission: true))
+  end
 end
