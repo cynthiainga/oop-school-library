@@ -17,6 +17,7 @@ To get the content of this project locally you need to run these commands in you
 Before starting the steps below, be sure you have [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/).
 1. Download the `Zip` or clone it with `git clone https://github.com/cynthiainga/oop-school-library.git`
 2. `cd oop-school-library`
+3. Run this commands in terminal`ruby main.rd` to run the app
 
 
 ## Author
