@@ -37,4 +37,11 @@ class App
   def create_a_rental(date, book_id, person_id)
     @rentals.push(Rental.new(date, @books[book_id], @persons[person_id]))
   end
+
+  def list_rental_person(id)
+    @persons.each do |person|
+        return person.rentals if person.id == id
+    end
+    nil
+  end
 end
