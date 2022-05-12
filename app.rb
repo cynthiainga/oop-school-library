@@ -40,7 +40,7 @@ class App
 
   def list_rental_person(id)
     @persons.each do |person|
-        return person.rentals if person.id == id
+      return person.rentals if person.id == id
     end
     nil
   end
