@@ -5,18 +5,6 @@ class Main
     @app = App.new
   end
 
-  def create_a_teacher
-    print 'Age: '
-    age = gets.chomp
-    print 'Name: '
-    name = gets.chomp
-    print 'Specialisation: '
-    specialisation = gets.chomp
-    puts 'Person created successfully '
-    puts
-    @app.create_a_teacher(age, specialisation, name)
-  end
-
   def create_a_student
     print 'Age: '
     age = gets.chomp
@@ -27,6 +15,18 @@ class Main
     puts 'Person created successfully '
     puts
     @app.create_a_student(name, age, permission)
+  end
+
+  def create_a_teacher
+    print 'Age: '
+    age = gets.chomp
+    print 'Name: '
+    name = gets.chomp
+    print 'Specialisation: '
+    specialisation = gets.chomp
+    puts 'Person created successfully '
+    puts
+    @app.create_a_teacher(age, specialisation, name)
   end
 
   def create_a_person

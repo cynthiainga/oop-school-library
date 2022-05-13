@@ -22,16 +22,16 @@ class App
     @persons
   end
 
-  def create_a_teacher(name, age, specialization)
-    @persons.push(Teacher.new(age, specialization, name, parent_permission: true))
+  def create_a_book(title, author)
+    @books.push(Book.new(title, author))
   end
 
   def create_a_student(name, age, parent_permission)
     @persons.push(Student.new(age, nil, name, parent_permission: parent_permission))
   end
 
-  def create_a_book(title, author)
-    @books.push(Book.new(title, author))
+  def create_a_teacher(name, age, specialization)
+    @persons.push(Teacher.new(age, specialization, name, parent_permission: true))
   end
 
   def create_a_rental(date, book_id, person_id)
