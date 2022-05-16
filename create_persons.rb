@@ -23,7 +23,7 @@ class CreatePerson
     parent_permission = gets.chomp
     [age, name, parent_permission]
   end
-  
+
   def create_a_student
     age, name, parent_permission = inputs_student
     student = Student.new(age, nil, name, parent_permission: parent_permission)
