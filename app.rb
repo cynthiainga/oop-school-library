@@ -1,6 +1,10 @@
 require_relative 'capitalize_decorator'
 require_relative 'trimmer_decorator'
+require_relative 'create_persons'
+require_relative 'create_rental'
+require_relative 'create_books'
 require_relative 'classroom'
+require_relative 'list'
 require_relative 'teacher'
 require_relative 'student'
 require_relative 'person'
@@ -12,36 +16,38 @@ class App
     @books = []
     @persons = []
     @rentals = []
+    @list = List.new
   end
 
   def list_all_books
-    @books
+    @list.display_books_list(@books)
   end
 
   def list_all_persons
-    @persons
+    @list.display_persons_list(@persons)
   end
 
-  def create_a_book(title, author)
-    @books.push(Book.new(title, author))
+  def create_a_book
+    @books << CreateBook.new.create_a_book
   end
 
-  def create_a_student(name, age, parent_permission)
-    @persons.push(Student.new(age, nil, name, parent_permission: parent_permission))
+  def create_a_student
+    @persons << CreatePerson.new.create_a_student
   end
 
-  def create_a_teacher(name, age, specialization)
-    @persons.push(Teacher.new(age, specialization, name, parent_permission: true))
+  def create_a_teacher
+    @persons << CreatePerson.new.create_a_teacher
   end
 
-  def create_a_rental(date, book_id, person_id)
-    @rentals.push(Rental.new(date, @books[book_id], @persons[person_id]))
+  def create_a_person
+    @persons << CreatePerson.new.create_a_person
   end
 
-  def list_rental_person(id)
-    @persons.each do |person|
-      return person.rentals if person.id == id
-    end
-    nil
+  def create_a_rental
+    @rentals << CreateRental.new.create_a_rental(@books, @persons)
+  end
+
+  def list_rental_person
+    @list.display_rentals_list(@persons, @rentals)
   end
 end
