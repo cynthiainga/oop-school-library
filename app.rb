@@ -4,12 +4,12 @@ require_relative 'create_persons'
 require_relative 'create_rental'
 require_relative 'create_books'
 require_relative 'classroom'
-require_relative 'list'
 require_relative 'teacher'
 require_relative 'student'
 require_relative 'person'
 require_relative 'rental'
 require_relative 'book'
+require_relative 'list'
 
 class App
   def initialize

@@ -24,11 +24,12 @@ class List
     puts 'Rentals Books: '
     rentals.each do |rental|
       if rental.person.id == id
-        puts "Person: #{rental.person.name} Date: #{rental.date}, Book: '#{rental.book.title}' by #{rental.book.author}"
+        puts "[#{rental.person.name}] Date: \"#{rental.date}\", Book: \"#{rental.book.title}\" by #{rental.book.author}"
       else
         puts
         puts 'No recorded books where found for the given ID'
       end
     end
+    puts
   end
 end

@@ -9,7 +9,7 @@ class CreatePerson
     when '2'
       create_a_teacher
     else
-      puts 'Oop! Wrong input. Try again.'
+      puts 'Oops! Wrong input. Try again!'
       puts
     end
   end
