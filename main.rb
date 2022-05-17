@@ -1,4 +1,6 @@
-require_relative 'app'
+require 'json'
+require './app'
+require './library/save_data'
 
 class StartApp
   def initialize
@@ -56,6 +58,7 @@ class StartApp
         puts 'Option unknown'
       end
     end
+    save_data(@app.books, @app.persons, @app.rentals)
     puts
     puts 'Thank you for using this app!'
     puts
