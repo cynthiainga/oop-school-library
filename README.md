@@ -28,6 +28,12 @@ Before starting the steps below, be sure you have [Git](https://www.linode.com/d
 - Twitter: [@CynthiaInga_C](https://twitter.com/CynthiaInga_C)
 - LinkedIn: [Cynthia Inga](https://www.linkedin.com/in/cynthia-inga/)
 
+👤 **Tufahel Ahmed**
+
+- GitHub: [@Tufahel](https://github.com/Tufahel)
+- Twitter: [@TufahelAhmed](https://twitter.com/TufahelAhmed)
+- LinkedIn: [@Tufahel-Ahmed](https://www.linkedin.com/in/tufahel-ahmed/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
