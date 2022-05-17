@@ -1,21 +1,25 @@
-require_relative 'capitalize_decorator'
-require_relative 'trimmer_decorator'
-require_relative 'create_persons'
-require_relative 'create_rental'
-require_relative 'create_books'
-require_relative 'classroom'
-require_relative 'teacher'
-require_relative 'student'
-require_relative 'person'
-require_relative 'rental'
-require_relative 'book'
-require_relative 'list'
+require_relative 'library/capitalize_decorator'
+require_relative 'library/trimmer_decorator'
+require_relative 'library/create_persons'
+require_relative 'library/create_rental'
+require_relative 'library/create_books'
+require_relative 'library/classroom'
+require_relative 'library/load_data'
+require_relative 'library/teacher'
+require_relative 'library/student'
+require_relative 'library/person'
+require_relative 'library/rental'
+require_relative 'library/book'
+require_relative 'library/list'
 
 class App
+  attr_accessor :books, :persons, :rentals
+
   def initialize
-    @books = []
-    @persons = []
-    @rentals = []
+    initialize_files
+    @books = load_books
+    @persons = load_persons
+    @rentals = load_rentals(@books, @persons)
     @list = List.new
   end
 

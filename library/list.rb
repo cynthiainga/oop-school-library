@@ -21,13 +21,13 @@ class List
 
     id = gets.chomp.to_i
 
+    puts
     puts 'Rentals Books: '
     rentals.each do |rental|
       if rental.person.id == id
         puts "[#{rental.person.name}] Date: \"#{rental.date}\", Book: \"#{rental.book.title}\" by #{rental.book.author}"
       else
-        puts
-        puts 'No recorded books where found for the given ID'
+        puts ''
       end
     end
     puts
